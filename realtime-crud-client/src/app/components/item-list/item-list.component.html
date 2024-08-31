@@ -1,0 +1,19 @@
+<div class="container">
+   <h2>Item List</h2>
+   
+   <!-- Form to add a new item -->
+   <div>
+     <input [(ngModel)]="newItem.name" placeholder="Enter item name" />
+     <button (click)="addItem()">Add Item</button>
+   </div>
+   
+   <!-- Display the list of items -->
+   <ul>
+     <li *ngFor="let item of items">
+       {{ item.name }}
+       <button (click)="editItem(item)">Edit</button>
+       <button (click)="deleteItem(item._id)">Delete</button>
+     </li>
+   </ul>
+ </div>
+ 
